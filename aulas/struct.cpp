@@ -8,6 +8,22 @@ struct Carro
     string cor;
     int pot;
     int velMax;
+
+    void insert(string n, string c, int p, int v)
+    {
+        nome = n;
+        cor = c;
+        pot = p;
+        velMax = v;
+    }
+
+    void show()
+    {
+        cout << "Nome: " << nome << endl;
+        cout << "Cor: " << cor << endl;
+        cout << "Potencia: " << pot << endl;
+        cout << "Velocidade Maxima: " << velMax << endl;
+    }
 };
 
 int main()
@@ -15,15 +31,8 @@ int main()
 
     Carro car1;
 
-    car1.nome = "Fusca";
-    car1.cor = "azul";
-    car1.pot = 55;
-    car1.velMax = 100;
-
-    cout << "Nome: " << car1.nome << endl;
-    cout << "Cor: " << car1.cor << endl;
-    cout << "Potencia: " << car1.pot << endl;
-    cout << "Velocidade Maxima: " << car1.velMax << endl;
+    car1.insert("Fusca", "azul", 55, 100);
+    car1.show();
 
     return 0;
 }
